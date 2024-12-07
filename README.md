@@ -1,5 +1,7 @@
 # **Web-Based AR with WebXR**
 
+Get ready to redefine how people interact with AR and unlock a new realm of possibilities on the web!
+
 ---
 
 ## **Background Context**
@@ -72,5 +74,3 @@ This project enhances your:
 <p align="center">
   <img src="assets/qr_code.png" alt="QR Code" width="200"/>
 </p>
-
-**Get ready to redefine how people interact with AR and unlock a new realm of possibilities on the web!**
