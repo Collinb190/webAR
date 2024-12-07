@@ -63,7 +63,7 @@ function animate() {
 animate();
 
 // Array of colors to cycle through
-const buttonColors = ['#ff6f61', '#6fffb3', '#61a6ff', '#f4ff61', '#007BFF'];
+const buttonColors = ['#ff6f61', '#6fffb3', '#61a6ff', '#f4ff61'];
 let currentColorIndex = 0;
 
 // Function to cycle button colors with a smooth fade effect
