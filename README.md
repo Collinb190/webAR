@@ -69,4 +69,6 @@ This project enhances your:
 
 ---
 
+![QR Code](assets/qr_code.png)
+
 **Get ready to redefine how people interact with AR and unlock a new realm of possibilities on the web!**
