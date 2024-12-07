@@ -69,6 +69,8 @@ This project enhances your:
 
 ---
 
-![QR Code](assets/qr_code.png)
+<div style="text-align: center;">
+  <img src="assets/qr_code.png" alt="QR Code" width="200"/>
+</div>
 
 **Get ready to redefine how people interact with AR and unlock a new realm of possibilities on the web!**
