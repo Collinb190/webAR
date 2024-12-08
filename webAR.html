@@ -23,20 +23,30 @@
     <!-- Add a Smaller Cube -->
     <a-box 
       id="rotatingCube"
-      position="0 -1 -5" 
+      position="0 -1.05 -5" 
       rotation="0 45 0" 
       scale="0.5 0.5 0.5" 
       color="#6fffb3">
     </a-box>
-
+    
     <!-- Add Text -->
     <a-text 
       value="Hello, AR World!" 
       position="0 -0.5 -5" 
-      color="#61a6ff" 
+      color="white" 
       align="center" 
       scale="1 1 1">
     </a-text>
+    
+    <!-- Add Plane for Text Background -->
+    <a-plane 
+      position="0 -1 -10" 
+      rotation="0 0 0" 
+      width="4" 
+      height="1" 
+      color="black" 
+      opacity="0.3">
+    </a-plane>
 
     <!-- AR Camera -->
     <a-camera 
