@@ -1,6 +1,6 @@
 // Start AR Function
 function initiateAR() {
-  window.location.href = 'ar.html';
+  window.location.href = 'webAR.html';
 }
 
 // Particle Effect Background
