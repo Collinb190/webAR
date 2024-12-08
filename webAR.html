@@ -1,25 +1,68 @@
-<html>
-  <head>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D7"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal AR Example</title>
+  <!-- A-Frame Library -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <!-- AR.js Library -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/dev/aframe/build/aframe-ar.js"></script>
+  <style>
+    /* Simple styling */
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #no-ar-message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fallback Message for Unsupported Devices -->
+  <div id="no-ar-message">
+    <h1>AR Not Supported</h1>
+    <p>Try using a compatible browser or device.</p>
+  </div>
+
+  <!-- AR Scene -->
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: false">
+    
+    <!-- Add a Simple Cube -->
+    <a-box 
+      position="0 0 -2" 
+      rotation="0 45 0" 
+      color="blue">
+    </a-box>
+
+    <!-- AR Camera -->
+    <a-camera 
+      position="0 0 0" 
+      look-controls 
+      fov="60" 
+      near="0.01" 
+      far="1000">
+    </a-camera>
+  </a-scene>
+
+  <script>
+    // Check for AR support and show fallback if necessary
+    document.addEventListener('DOMContentLoaded', () => {
+      const noARMessage = document.getElementById('no-ar-message');
+      if (!AFRAME.utils.device.checkARSupport()) {
+        noARMessage.style.display = 'block';
+        console.warn("AR not supported on this device.");
+      }
+    });
+  </script>
+</body>
 </html>
