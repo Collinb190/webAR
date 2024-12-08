@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimal AR Example</title>
+  <title>Simple AR Example</title>
   <!-- A-Frame Library -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <!-- AR.js Library -->
@@ -14,33 +14,19 @@
       margin: 0;
       overflow: hidden;
     }
-    #no-ar-message {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
-  <!-- Fallback Message for Unsupported Devices -->
-  <div id="no-ar-message">
-    <h1>AR Not Supported</h1>
-    <p>Try using a compatible browser or device.</p>
-  </div>
-
   <!-- AR Scene -->
   <a-scene
     embedded
     arjs="sourceType: webcam; debugUIEnabled: false">
     
-    <!-- Add a Simple Cube -->
+    <!-- Add a Smaller Cube -->
     <a-box 
-      position="0 0 -2" 
+      position="0 0 -5" 
       rotation="0 45 0" 
+      scale="0.5 0.5 0.5" 
       color="blue">
     </a-box>
 
@@ -53,16 +39,5 @@
       far="1000">
     </a-camera>
   </a-scene>
-
-  <script>
-    // Check for AR support and show fallback if necessary
-    document.addEventListener('DOMContentLoaded', () => {
-      const noARMessage = document.getElementById('no-ar-message');
-      if (!AFRAME.utils.device.checkARSupport()) {
-        noARMessage.style.display = 'block';
-        console.warn("AR not supported on this device.");
-      }
-    });
-  </script>
 </body>
 </html>
