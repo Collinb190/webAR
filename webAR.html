@@ -8,6 +8,8 @@
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <!-- AR.js Library -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/dev/aframe/build/aframe-ar.js"></script>
+  <!-- AR Custom Script -->
+  <script src="scriptAR.js" defer></script>
   <!-- Simple Styling -->
   <style>
     body {
@@ -26,7 +28,7 @@
       position="0 -1.05 -5" 
       rotation="0 45 0" 
       scale="0.5 0.5 0.5" 
-      color="#6fffb3">
+      color="#4cbf99">
     </a-box>
     
     <!-- Add Text -->
@@ -57,30 +59,5 @@
       far="1000">
     </a-camera>
   </a-scene>
-
-  <!-- Scripts -->
-  <script id="rotateCube">
-    // Grab the cube element
-    const cube = document.getElementById('rotatingCube');
-    let rotationSpeed = 0.3; // Speed of rotation (degrees per frame)
-
-    // Animation loop
-    function animateRotation() {
-      // Get the current rotation of the cube
-      let rotation = cube.getAttribute('rotation');
-
-      // Increment the Y rotation by rotationSpeed (this will make it rotate continuously)
-      rotation.y += rotationSpeed;
-
-      // Update the cube's rotation
-      cube.setAttribute('rotation', rotation);
-
-      // Call the animation loop again on the next frame
-      requestAnimationFrame(animateRotation);
-    }
-
-    // Start the animation loop
-    animateRotation();
-  </script>
 </body>
 </html>
